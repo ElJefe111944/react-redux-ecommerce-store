@@ -1,3 +1,15 @@
+/*-- Global Styles --*/
+:root {
+  --btn-bg-green: #00b5ad;
+  --text-green: #00b5ad;
+  --text-white: #fff;
+}
+/*-- Header Styling --*/
+.ui.container.center h2 {
+  color: var(--btn-bg-green);
+  font-size: 35px;
+}
+/*-- PLP Styling --*/
 .ui.fixed.menu+.ui.grid {
   padding-top: 3.75rem;
   justify-content: center;
@@ -17,11 +29,33 @@
   margin-top: 30px;
 }
 .four.column.wide {
-  border: 1px solid #b4a9a9;
+  border: 1px solid #00000014;
   padding: 10px;
   max-width: 300px;
   min-width: 300px;
+  box-shadow: 5px 5px #00000014;
+  transition: all .3s;
+  transform: scale(1);
+  overflow: hidden;
 }
+.four.column.wide:hover {
+  transform: scale(1.02);
+}
+.ui.container.center h2 {
+  color: var(--btn-bg-green);
+}
+.content .header {
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+}
+  .meta.price {
+  color: black;
+}
+.meta {
+  color: var(--text-green);
+}
+
 .image img {
   width: 250px;
   height: 300px;
@@ -39,8 +73,8 @@
   align-items: center;
   text-align: center;
   padding: 10px;
+  color: black;
 }
-
 
 /*-- Media Queries --*/
 @media(max-width:1440px){
