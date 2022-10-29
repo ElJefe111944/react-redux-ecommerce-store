@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { ActionTypes } from "../constants/ActionTypes"
 
 const initialState = {
@@ -12,3 +13,13 @@ export const productReducer = (state = initialState, {type, payload}) => {
             return state;
     }
 };
+
+export const selectedProductReducer = (state={}, { type,payload }) => {
+    switch (type) {
+        case ActionTypes.SELECTED_PRODUCT:
+            return {...state, ...payload}         
+  
+        default:
+            return state;
+    }
+}
